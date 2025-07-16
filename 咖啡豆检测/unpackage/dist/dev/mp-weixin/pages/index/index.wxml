@@ -1,0 +1,1 @@
+<view class="container"><view class="box"><view class="grid"><image class="grid-item" src="{{a}}" bindtap="{{b}}"></image><image class="grid-item" src="{{c}}" bindtap="{{d}}"></image><image class="grid-item" src="{{e}}" bindtap="{{f}}"></image><image class="grid-item" src="{{g}}" bindtap="{{h}}"></image></view></view></view>

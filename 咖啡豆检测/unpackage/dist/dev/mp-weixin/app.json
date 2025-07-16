@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bean id/bean id",
+    "pages/my/my",
+    "pages/detection/detection",
+    "pages/read/read",
+    "pages/Baike/Baike",
+    "pages/Wenhua/Wenhua",
+    "pages/Lishi/Lishi",
+    "pages/Jingdian/Jingdian",
+    "pages/my-collection/my-collection",
+    "pages/my-login/my-login",
+    "pages/my-contact us/my-contact us",
+    "pages/my-reset password/my-reset password",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#6f4e37",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/tabbar/百科.png",
+        "selectedIconPath": "/static/tabbar/百科2.png",
+        "text": "百科"
+      },
+      {
+        "pagePath": "pages/bean id/bean id",
+        "iconPath": "/static/tabbar/豆子2.png",
+        "selectedIconPath": "/static/tabbar/豆子2 (1).png",
+        "text": "豆识"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/static/tabbar/我的.png",
+        "selectedIconPath": "/static/tabbar/我的 (1).png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

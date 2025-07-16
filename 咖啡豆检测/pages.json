@@ -1,0 +1,131 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path" : "pages/bean id/bean id",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my/my",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/detection/detection",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/read/read",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Baike/Baike",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Wenhua/Wenhua",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Lishi/Lishi",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Jingdian/Jingdian",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my-collection/my-collection",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+				
+			}
+		},
+		{
+			"path" : "pages/my-login/my-login",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my-contact us/my-contact us",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my-reset password/my-reset password",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#6f4e37",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath":"/static/tabbar/百科.png",
+			"selectedIconPath": "/static/tabbar/百科2.png",
+			"text": "百科"
+		}, {
+			"pagePath": "pages/bean id/bean id",
+			"iconPath":"/static/tabbar/豆子2.png",
+			"selectedIconPath":"/static/tabbar/豆子2 (1).png",
+			"text": "豆识"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath":"/static/tabbar/我的.png",
+			"selectedIconPath": "/static/tabbar/我的 (1).png",
+			"text": "我的"
+		}]
+	}
+}

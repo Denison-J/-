@@ -1,0 +1,1 @@
+<view class="container"><view class="box1"><image class="exit" src="{{a}}" bindtap="{{b}}"></image><view class="title">我的收藏</view><image class="share" src="{{c}}"></image></view><view class="search"><input class="inp" type="text" placeholder="搜索" bindtap="{{d}}"></input></view></view>
