@@ -53,28 +53,40 @@
 .arrow {
   font-size: 80rpx;
   color: #c6a234;
-  margin: 35rpx 150rpx;
+  margin: 35rpx 200rpx;
+}
+.arrow1 {
+  font-size: 80rpx;
+  color: #c6a234;
+  margin: 35rpx 280rpx;
 }
 .box {
   margin: 60rpx 30rpx;
 }
+.box0 {
+  margin: 60rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 5rpx;
+  flex-shrink: 0;
+  min-width: 150rpx;
+}
+.name0, .id0 {
+  color: #cca836;
+  /* 可保留 margin 调整位置，或用 gap 控制间距 */
+}
 .my-content {
   display: flex;
   flex-direction: column;
-  /* 垂直排列子项 */
   position: absolute;
   margin-top: 50%;
-  /* 根据需要调整 */
   align-items: center;
-  /* 水平居中对齐子项 */
 }
 .my-content-item {
   background-color: #c7a17a;
   display: flex;
   flex-direction: row;
-  /* 水平排列文字和箭头 */
   align-items: center;
-  /* 垂直居中对齐文字和箭头 */
   padding: 40rpx 0;
   border-radius: 20rpx;
   margin-top: 20rpx;

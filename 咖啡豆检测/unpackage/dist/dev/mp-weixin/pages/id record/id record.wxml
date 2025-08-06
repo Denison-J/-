@@ -1,0 +1,1 @@
+<view class="container"><view class="box1"><view class="image-container"><view class="data1">2025年x月x日15：30</view><image class="img1" src="{{a}}"></image></view><view class="text-group"><view class="result">识别结果：</view><view class="name1">XX病</view></view></view></view>

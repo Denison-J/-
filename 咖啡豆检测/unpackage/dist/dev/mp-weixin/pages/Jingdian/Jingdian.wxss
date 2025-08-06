@@ -1,15 +1,108 @@
 
-.my-content{
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	margin-top: 50%;
+/* 全局页面容器样式 */
+.coffee-book-read.data-v-4a214e9d {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.my-content-item{
-	display: flex;
-	flex-direction: row;
-	padding: 20rpx 0;
+/* 搜索框样式 */
+.search-box.data-v-4a214e9d {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 80rpx;
+  height: 60rpx;
+  border: 2rpx solid #9b785f;
+  border-radius: 30rpx;
+  width: 570rpx;
 }
-.my-content-item text {
-  margin-right: 70rpx;
+.search-icon.data-v-4a214e9d {
+  width: 42rpx;
+  height: 42rpx;
+  margin-left: 20rpx;
+}
+
+/* 用户信息及书架区域样式 */
+.user-section.data-v-4a214e9d {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20rpx;
+  padding: 20rpx 20rpx;
+  background-color: #6c5f57;
+  border-radius: 20rpx;
+}
+.user-info.data-v-4a214e9d {
+  display: flex;
+  align-items: center;
+}
+.user-avatar.data-v-4a214e9d {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.user-name.data-v-4a214e9d {
+  font-size: 25rpx;
+  color: #fff;
+}
+.book-shelf.data-v-4a214e9d {
+  display: flex;
+  align-items: center;
+}
+.shelf-img.data-v-4a214e9d {
+  width: 130rpx;
+  height: 180rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+.shelf-text.data-v-4a214e9d {
+  display: flex;
+  align-items: center;
+}
+.shelf-title.data-v-4a214e9d {
+  font-size: 28rpx;
+  color: #fff;
+  margin-right: 10rpx;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl; 
+  white-space: pre;
+}
+.arrow-right.data-v-4a214e9d {
+  font-size: 40rpx;
+  color: #fff;
+}
+/* 书籍列表项样式 */
+.book-item.data-v-4a214e9d {
+  display: flex;
+  align-items: center;
+  margin: 20rpx;
+  padding: 40rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 20rpx;
+}
+.book-cover.data-v-4a214e9d {
+  width: 150rpx;
+  height: 190rpx;
+  margin-right: 55rpx;
+  margin-left: -20rpx;
+}
+.book-info.data-v-4a214e9d {
+  display: flex;
+  flex-direction: column;
+  line-height: 50rpx;
+}
+.book-title.data-v-4a214e9d {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10rpx;
+}
+.book-author.data-v-4a214e9d {
+  font-size: 28rpx;
+  color: #d0cfcf;
+  margin-bottom: 5rpx;
+}
+.book-category.data-v-4a214e9d {
+  font-size: 26rpx;
+  color: #d0cfcf;
 }

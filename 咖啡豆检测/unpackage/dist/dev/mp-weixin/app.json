@@ -13,7 +13,11 @@
     "pages/my-login/my-login",
     "pages/my-contact us/my-contact us",
     "pages/my-reset password/my-reset password",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/talk/talk",
+    "pages/id record/id record",
+    "pages/Change/Change",
+    "pages/Register/Register"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -32,6 +36,12 @@
         "iconPath": "/static/tabbar/百科.png",
         "selectedIconPath": "/static/tabbar/百科2.png",
         "text": "百科"
+      },
+      {
+        "pagePath": "pages/talk/talk",
+        "iconPath": "/static/tabbar/10.png",
+        "selectedIconPath": "/static/tabbar/11.png",
+        "text": "对话"
       },
       {
         "pagePath": "pages/bean id/bean id",

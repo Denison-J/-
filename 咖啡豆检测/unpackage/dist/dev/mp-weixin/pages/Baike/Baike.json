@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "咖啡豆百科",
+  "navigationBarBackgroundColor": "#876751",
+  "navigationBarTextStyle": "white",
   "usingComponents": {}
 }

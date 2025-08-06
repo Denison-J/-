@@ -16,6 +16,10 @@ if (!Math) {
   "./pages/my-contact us/my-contact us.js";
   "./pages/my-reset password/my-reset password.js";
   "./pages/search/search.js";
+  "./pages/talk/talk.js";
+  "./pages/id record/id record.js";
+  "./pages/Change/Change.js";
+  "./pages/Register/Register.js";
 }
 const _sfc_main = {
   onLaunch: function() {

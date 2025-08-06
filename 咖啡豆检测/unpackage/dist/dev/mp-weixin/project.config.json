@@ -29,15 +29,8 @@
       "list": []
     },
     "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "id": 0,
-          "name": "pages/my-login/my-login",
-          "pathName": "pages/my-login/my-login",
-          "query": ""
-        }
-      ]
+      "current": -1,
+      "list": []
     }
   }
 }
