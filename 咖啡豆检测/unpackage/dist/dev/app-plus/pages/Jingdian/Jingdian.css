@@ -1,0 +1,108 @@
+
+/* 全局页面容器样式 */
+.coffee-book-read[data-v-4a214e9d] {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+/* 搜索框样式 */
+.search-box[data-v-4a214e9d] {
+  display: flex;
+  align-items: center;
+  margin: 0.625rem 2.5rem;
+  height: 1.875rem;
+  border: 0.0625rem solid #9b785f;
+  border-radius: 0.9375rem;
+  width: 17.8125rem;
+}
+.search-icon[data-v-4a214e9d] {
+  width: 1.3125rem;
+  height: 1.3125rem;
+  margin-left: 0.625rem;
+}
+
+/* 用户信息及书架区域样式 */
+.user-section[data-v-4a214e9d] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.625rem;
+  padding: 0.625rem 0.625rem;
+  background-color: #6c5f57;
+  border-radius: 0.625rem;
+}
+.user-info[data-v-4a214e9d] {
+  display: flex;
+  align-items: center;
+}
+.user-avatar[data-v-4a214e9d] {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  margin-right: 0.625rem;
+}
+.user-name[data-v-4a214e9d] {
+  font-size: 0.78125rem;
+  color: #fff;
+}
+.book-shelf[data-v-4a214e9d] {
+  display: flex;
+  align-items: center;
+}
+.shelf-img[data-v-4a214e9d] {
+  width: 4.0625rem;
+  height: 5.625rem;
+  margin-top: 0.625rem;
+  margin-left: 0.3125rem;
+}
+.shelf-text[data-v-4a214e9d] {
+  display: flex;
+  align-items: center;
+}
+.shelf-title[data-v-4a214e9d] {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-right: 0.3125rem;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl; 
+  white-space: pre;
+}
+.arrow-right[data-v-4a214e9d] {
+  font-size: 1.25rem;
+  color: #fff;
+}
+/* 书籍列表项样式 */
+.book-item[data-v-4a214e9d] {
+  display: flex;
+  align-items: center;
+  margin: 0.625rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.625rem;
+}
+.book-cover[data-v-4a214e9d] {
+  width: 4.6875rem;
+  height: 5.9375rem;
+  margin-right: 1.71875rem;
+  margin-left: -0.625rem;
+}
+.book-info[data-v-4a214e9d] {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5625rem;
+}
+.book-title[data-v-4a214e9d] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0.3125rem;
+}
+.book-author[data-v-4a214e9d] {
+  font-size: 0.875rem;
+  color: #d0cfcf;
+  margin-bottom: 0.15625rem;
+}
+.book-category[data-v-4a214e9d] {
+  font-size: 0.8125rem;
+  color: #d0cfcf;
+}

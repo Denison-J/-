@@ -1,22 +1,19 @@
 <template>
-	<!-- 注册页面 -->
 	<view class="register-container">
-	  <!-- 标题区域 -->
+	  
 	  <view class="title-container">
 	    <text class="title">账号注册</text>
 	    <text class="subtitle">创建新账号，开启全新体验</text>
 	  </view>
 	  
-	  <!-- 表单区域 -->
-	  <form class="register-form" bindsubmit="formSubmit" bindreset="formReset">
+	  <form class="register-form" @submit="formSubmit" @reset="formReset">
 	    <!-- 用户名输入 -->
 	    <view class="form-group">
 	      <view class="input-wrapper">
 	        <icon type="user" size="20" class="input-icon"></icon>
-	        <input type="text" name="username" placeholder="请输入用户名"  placeholder-class="placeholder" bindinput="handleUsernameInput" value="" />
+	        <input type="text" name="username" placeholder="请输入用户名"  placeholder-class="placeholder" @input="handleUsernameInput" value="" />
 	      </view>
 	    </view>
-	    
 	    
 	    <!-- 密码输入 -->
 	    <view class="form-group">
@@ -26,38 +23,35 @@
 	          name="password" 
 	          placeholder="请设置密码" 
 	          placeholder-class="placeholder"
-	          bindinput="handlePasswordInput"
+	          @input="handlePasswordInput"
 	          value=""
 	        />
 	      </view>
-	      
 	    </view>
 	    
-	     <!-- 确认密码输入 -->
-	        <view class="form-group">
-	          <view class="input-wrapper">
-	            <icon type="lock" size="20" class="input-icon"></icon>
-	            <input 
-	              
-	              name="confirmPassword" 
-	              placeholder="请确认密码" 
-	              placeholder-class="placeholder"
-	              bindinput="handleConfirmPasswordInput"
-	              value=""
-	            />
-	          </view>
-	          
-	        </view>
+	    <!-- 确认密码输入 -->
+	    <view class="form-group">
+	      <view class="input-wrapper">
+	        <icon type="lock" size="20" class="input-icon"></icon>
+	        <input 
+	          name="confirmPassword" 
+	          placeholder="请确认密码" 
+	          placeholder-class="placeholder"
+	          @input="handleConfirmPasswordInput"
+	          value=""
+	        />
+	      </view>
+	    </view>
 	    
-	    <!-- 同意协议 -->
+	    <!-- 同意协议（修复v-model错误） -->
 	    <view class="agreement">
-	      <checkbox-group name="agreement">
+	      <checkbox-group @change="onAgreementChange">
 	        <label class="checkbox-label">
-	          <checkbox value="agree" checked="{{agree}}" bindchange="handleAgreementChange" />
+	          <checkbox value="agree" :checked="isAgreed" />
 	          <text>我已阅读并同意</text>
-	          <text class="agreement-link" bindtap="navigateToAgreement">《用户协议》</text>
+	          <text class="agreement-link" @tap="navigateToAgreement">《用户协议》</text>
 	          <text>和</text>
-	          <text class="agreement-link" bindtap="navigateToPrivacy">《隐私政策》</text>
+	          <text class="agreement-link" @tap="navigateToPrivacy">《隐私政策》</text>
 	        </label>
 	      </checkbox-group>
 	    </view>
@@ -77,24 +71,110 @@
 	    </view>
 	  </form>
 	</view>
-
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				
+				username: '',
+				password: '',
+				confirmPassword: '',
+				//email: '',
+				//phone: '',
+				isAgreed: false // 用普通变量存储勾选状态
 			}
 		},
+		onLoad() {
+			console.log('页面刚加载，这是onLoad里的日志');
+		},
 		methods: {
+			handleUsernameInput(e){
+				this.username = e.detail.value;
+				console.log("输入的用户名：", this.username);
+			},
 			
+			handlePasswordInput(e) {
+				this.password = e.detail.value;
+				console.log("输入的密码：", this.password);
+			},
+			
+			handleConfirmPasswordInput(e) {
+				this.confirmPassword = e.detail.value;
+				console.log("输入的确认密码：", this.confirmPassword);
+			},
+			
+			// 处理协议勾选状态变化
+			onAgreementChange(e) {
+				// 当勾选时，e.detail.value会包含"agree"
+				this.isAgreed = e.detail.value.includes('agree');
+				console.log("协议勾选状态：", this.isAgreed);
+			},
+			
+			navigateToAgreement() {
+				console.log('点击了用户协议');
+			},
+			
+			navigateToPrivacy() {
+				console.log('点击了隐私政策');
+			},
+			
+			async formSubmit() {
+				console.log('开始执行注册逻辑');
+				
+				// 协议勾选判断
+				if (!this.isAgreed) {
+					uni.showToast({ title: '请同意用户协议', icon: 'none' });
+					return;
+				}
+				
+				if (this.password !== this.confirmPassword) {
+					uni.showToast({ title: '两次密码不一致', icon: 'none' });
+					return;
+				}
+				
+				const registerData = {
+					username: this.username,
+					password: this.password,
+					email: this.email,
+					phone: this.phone
+				};
+				
+				try {
+				  console.log('准备发送请求，数据：', registerData);
+				  const res = await uni.request({
+				    url: "http://localhost:8080/api/user/register",
+				    method: "POST",
+				    header: { "Content-Type": "application/json" },
+				    data: JSON.stringify(registerData), // 显式转 JSON
+				  });
+				
+				  if (res.statusCode >= 200 && res.statusCode < 300) {
+				    console.log('请求成功，响应：', res.data);
+				    if (res.data.code === 200) {
+				      uni.showToast({ title: "注册成功" });
+				    } else {
+				      uni.showToast({ title: res.data.msg || "注册失败", icon: "none" });
+				    }
+				  } else {
+				    console.error('HTTP 错误：', res.statusCode);
+				    uni.showToast({ title: `请求失败 (${res.statusCode})`, icon: "none" });
+				  }
+				} catch (error) {
+				  console.error('网络异常：', error);
+				  uni.showToast({ title: "网络错误，请检查连接", icon: "none" });
+				}
+			}, // 这里是两个方法之间的分隔逗号（正确）
+			
+			formReset() {
+				console.log('表单重置');
+			}
 		}
 	}
 </script>
 
+
 <style>
-/* 注册页面样式 */
 .register-container {
   display: flex;
   flex-direction: column;
@@ -105,7 +185,6 @@
   background-color: #f8dfc3;
 }
 
-/* 标题样式 */
 .title-container {
   margin-top: 80rpx;
   margin-bottom: 60rpx;
@@ -125,7 +204,6 @@
   color: #666;
 }
 
-/* 表单样式 */
 .register-form {
   width: 100%;
   margin-top: 50rpx;
@@ -157,7 +235,6 @@
   text-align: center;
 }
 
-
 .input {
   flex: 1;
   height: 100%;
@@ -169,7 +246,6 @@
   color: #ccc;
 }
 
-/* 协议 */
 .agreement {
   margin: 10rpx 0 40rpx 0;
   padding-top: 30rpx;
@@ -188,7 +264,6 @@
   margin: 0 5rpx;
 }
 
-/* 按钮 */
 .register-btn {
   width: 100%;
   height: 90rpx;
@@ -204,7 +279,6 @@
   border: none;
 }
 
-/* 登录链接 */
 .login-link {
   text-align: center;
   font-size: 26rpx;
@@ -217,5 +291,4 @@
   text-decoration: none;
   margin-left: -26rpx;
 }
-
 </style>

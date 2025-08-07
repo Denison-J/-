@@ -1,0 +1,57 @@
+
+.container{
+	background-image: url("../../static/tabbar/屏幕截图 2025-06-15 155837.png");
+	background-size: cover;
+	 height: 100vh;
+	 width: 100%;
+	 background-position: center;
+}
+.title1{
+	font-size: 1.71875rem;
+	text-align: center;
+	padding-top: 0.625rem;
+}
+.title2{
+	font-size: 1.71875rem;
+	text-align: center;
+	margin-top: 0.625rem;	
+	padding-left: 2.4375rem;
+}
+.camera{
+	  padding-top: 3.75rem;
+	  padding-left: 2.1875rem;
+}
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height:9.375rem;
+  background-color: #6f4d37; /* 背景颜色 */
+  border-radius: 0.625rem;
+  margin: 1.96875rem 0.625rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  font-size: 1.25rem;
+  color: #3e2723; /* 文字颜色 */
+}
+.subtitle {
+  font-size: 0.625rem;
+  color: #ffffff; /* 文字颜色 */
+}
+.icon {
+  width: 3.125rem; /* 图标宽度 */
+  height: 3.125rem; /* 图标高度 */
+  margin-top: 0.625rem;
+}
+.divider {
+  width: 0.03125rem;
+  height: 4.6875rem;
+  background-color: #ffffff; /* 分隔线颜色 */
+}
+
