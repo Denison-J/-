@@ -1,0 +1,7 @@
+# 忽略整个后端目录（关键）
+../springboot-init-old-master/
+
+# 忽略前端构建产物和临时文件（可选但推荐）
+unpackage/dist/dev/cache/
+.hbuilderx/
+.idea/
